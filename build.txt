@@ -1,0 +1,3 @@
+displayName = Copy Cat Mod
+author = hdert
+version = 0.1
