@@ -10,7 +10,7 @@ namespace CopyCatMod.Projectiles.Minions.CopyOrb
     {
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Copy Orb");
+			// DisplayName.SetDefault("Copy Orb");
             // Denotes that this projectile is a pet or minion
             Main.projPet[projectile.type] = true;
             // This is needed so your minion can properly spawn when summoned and replaced when other minions are summoned
