@@ -1,3 +1,5 @@
 displayName = Copy Cat Mod
 author = hdert
 version = 0.1
+buildIgnore = bin/, obj/, .vscode/, Properties/, .gitignore
+homepage = https://github.com/hdert/CopyCatMod
