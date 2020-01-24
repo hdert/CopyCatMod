@@ -15,9 +15,8 @@ namespace CopyCatMod.Tiles
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             drop = mod.ItemType("SpecialDirt");
-            // AddMapEntry(new Color(34.5f, 42f, 52.2f, 52.2f));
             AddMapEntry(new Color(89, 110, 136), Language.GetText("Special Dirt"));
-
+            // Don't know why Language.GetText() doesn't grab from the .land file, hence why it is "Special Dirt".
         }
     }
 }

@@ -11,7 +11,7 @@ namespace CopyCatMod.Projectiles.Minions.CopyOrb
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Copy Orb Sentientizer");
 			Tooltip.SetDefault("Summons a Copy Orb to ram stuff to protect you.");
-			ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true; // This lets the player target anywhere on the whole screen while using a controller.
+			ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[item.type] = true;
 		}
 
@@ -27,20 +27,15 @@ namespace CopyCatMod.Projectiles.Minions.CopyOrb
 			item.value = Item.buyPrice(1, 0, 0, 0);
 			item.rare = 9;
 			item.UseSound = SoundID.Item44;
-
-			// These below are needed for a minion weapon
 			item.noMelee = true;
 			item.summon = true;
 			item.buffType = BuffType<CopyOrbBuff>();
-			// No buffTime because otherwise the item tooltip would say something like "1 minute duration"
 			item.shoot = ProjectileType<CopyOrbProjectile>();
 		}
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) {
-			// This is needed so the buff that keeps your minion alive and allows you to despawn it properly applies
 			player.AddBuff(item.buffType, 2);
 
-			// Here you can change where the minion is spawned. Most vanilla minions spawn at the cursor position.
 			position = Main.MouseWorld;
 			return true;
 		}

@@ -25,7 +25,6 @@ namespace CopyCatMod.Items
             item.useTime = 10;
             item.consumable = true;
             item.createTile = mod.TileType("SpecialDirtTile");
-            // Set other item.X values here
         }
 
         public override void AddRecipes()
@@ -34,14 +33,6 @@ namespace CopyCatMod.Items
             recipe.AddIngredient(ItemID.DirtBlock, 2);
             recipe.SetResult(this, 2);
             recipe.AddRecipe();
-            //Recipe uses two normal dirt to make two special dirt anywhere.
-            
-            //recipe = new ModRecipe(mod);
-            //recipe.AddIngredient(this, 2);
-            //recipe.SetResult(ItemID.DirtBlock, 2);
-            //recipe.AddRecipe();
-            //Recipe uses two special dirt to make two normal dirt anywhere.
-            // Recipes here. See Basic Recipe Guide
         }
     }
 }
